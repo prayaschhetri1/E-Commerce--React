@@ -1,7 +1,22 @@
 import React from "react";
 import { Box, Flex, Image, Heading, Text, Button } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
+import { postCartData } from "../redux/action";
 
 const Products = ({ item }) => {
+  // Add data functionality
+  const dispatch = useDispatch();
+  const handleAdd = (item) => {
+    const payload = {
+      title: item.title,
+      image: item.image,
+      rating: item.rating,
+      price: item.price,
+      category: item.category,
+    };
+    dispatch(postCartData(payload));
+  };
+
   return (
     <Flex
       className="single-box"
@@ -36,6 +51,7 @@ const Products = ({ item }) => {
         className="btn"
         color={"white"}
         _hover={{}}
+        onClick={() => handleAdd(item)}
       >
         ADD TO CART
       </Button>

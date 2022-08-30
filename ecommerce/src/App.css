@@ -52,3 +52,8 @@
 .single-box:hover {
   transform: scale(0.98);
 }
+.delete_btn:hover{
+  background: rgb(156, 2, 2);
+  transform: scale(0.95);
+  color: rgb(199, 192, 192);
+}
