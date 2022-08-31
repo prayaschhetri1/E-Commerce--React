@@ -26,6 +26,12 @@
 
 ### Deployed link : https://happyshop-six.vercel.app
 
+### Tech Stack Used :
+<h2>React Js | REDUX & REDUX-THUNK | HTML | JavaScript | Javascript</h2>
+<h2>For Styling purpuse used : CHAKRA UI</h2>
+
+
+
 ### Desktop View :
 
 <img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(179).png?raw=true" alt="product-image"/>
