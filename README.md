@@ -28,6 +28,18 @@
 
 ### Desktop View :
 
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(179).png?raw=true" alt="product-image"/>
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(178).png?raw=true" alt="product-image"/>
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(180).png?raw=true" alt="product-image"/>
+
 ### Tablet View :
 
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(186).png?raw=true" alt="product-image"/>
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(187).png?raw=true" alt="product-image"/>
+
 ### Smartphone View :
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(181).png?raw=true" alt="product-image"/>
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(182).png?raw=true" alt="product-image"/>
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(184).png?raw=true" alt="product-image"/>
+
+### Have any suggestions or feedback then you can connect with me. Thank you for giving the valuable time🤗🤗
