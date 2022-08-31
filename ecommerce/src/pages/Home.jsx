@@ -15,13 +15,12 @@ import { getData } from "./../redux/action";
 import Products from "../components/Products";
 import { useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.isLoading);
-
+  const [loading,setLoading] = useState(false)
   const [mainData, setMainData] = useState([]);
 
   useEffect(() => {
@@ -33,6 +32,8 @@ const Home = () => {
   }, [data]);
   // Sort By Price
   const handleSort = (value) => {
+    setLoading(true)
+
     if (value === "htl") {
       axios
         .get(
@@ -40,9 +41,12 @@ const Home = () => {
         )
         .then((res) => {
           setMainData(res.data);
+          setLoading(false)
         })
         .catch((e) => {
           console.warn(e);
+          setLoading(false)
+
         });
     } else if (value === "lth") {
       axios
@@ -51,17 +55,21 @@ const Home = () => {
         )
         .then((res) => {
           setMainData(res.data);
+          setLoading(false)
         })
         .catch((e) => {
           console.warn(e);
+          setLoading(false)
         });
     } else {
       dispatch(getData());
+      setLoading(false)
     }
   };
 
   // Filter By Category
   const handleFilter = (e) => {
+    setLoading(true)
     e.preventDefault();
     let value = e.target.value;
     if (value !== "all") {
@@ -69,12 +77,15 @@ const Home = () => {
         .get(`https://json-server1122.herokuapp.com/prods?q=${value}`)
         .then((res) => {
           setMainData(res.data);
+          setLoading(false)
         })
         .catch((e) => {
           console.warn(e);
+          setLoading(false)
         });
     } else {
       dispatch(getData());
+      setLoading(false)
     }
   };
 
@@ -92,7 +103,7 @@ const Home = () => {
       });
   };
 
-  if (isLoading) {
+  if (isLoading || loading) {
     return (
       <Flex m={"250px auto"} align={"center"} flexDirection="column">
         <Spinner size="xl" color="blue" />
