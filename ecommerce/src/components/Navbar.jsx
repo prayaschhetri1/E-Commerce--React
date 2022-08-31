@@ -1,13 +1,16 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <Box
+      position={"fixed"}
       bg={"rgb(18, 18, 18)"}
       padding="17px 0px 17px 0px"
-      minWidth={"70%"}
+      minWidth={"100%"}
       boxShadow="rgba(225, 221, 221, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
+      top="0"
+      zIndex={"999"}
     >
       <Flex justify={"space-between"} align="center" px="40px">
         <Flex gap={{ base: "24px", md: "38px", lg: "55" }} align={"center"}>
@@ -29,7 +32,9 @@ const Navbar = () => {
             </NavLink>
           </Flex>
         </Flex>
+      
         <Flex className="links">
+      
           <NavLink
             to={"/cart"}
             style={{

@@ -40,6 +40,8 @@
 .btn {
   transition: all 0.4s;
 
+
+
 }
 .btn:hover {
   background: rgb(49, 47, 47);
@@ -50,10 +52,12 @@
   transition: all 0.3s;
 }
 .single-box:hover {
-  transform: scale(0.98);
+  transform: scale(0.99);
+  background-color: rgb(235, 234, 234);
+
 }
 .delete_btn:hover{
-  background: rgb(156, 2, 2);
+
   transform: scale(0.95);
-  color: rgb(199, 192, 192);
+  color: rgb(193, 72, 72);
 }

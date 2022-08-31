@@ -32,7 +32,7 @@ export const reducer = (state = initialState, action) => {
     case types.ADD_DATA_LOADING: {
       return {
         ...state,
-        isLoading: true,
+        isLoading: false,
       };
     }
     case types.ADD_DATA_SUCCESS: {
