@@ -1,34 +1,29 @@
 import React, { useState } from "react";
-import { Box, Flex, Image, Heading, Text, Button } from "@chakra-ui/react";
-import { useDispatch, useSelector } from "react-redux";
+import { Flex, Image, Text, Button } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
 import { postCartData } from "../redux/action";
-import { getCartData } from "./../redux/action";
 
 const Products = ({ item }) => {
   // Add data functionality
-  const [isAdded,setIsAdded] = useState(false)
-  const cartData = useSelector(state=>state.cart)
+  const [isAdded, setIsAdded] = useState(false);
+
   const dispatch = useDispatch();
   const handleAdd = (item) => {
-    
     const payload = {
       title: item.title,
       image: item.image,
       rating: item.rating,
       price: item.price,
       category: item.category,
-      qty:1,
+      qty: 1,
     };
-    if(!isAdded){
+    if (!isAdded) {
       dispatch(postCartData(payload));
       alert("Item added to the cart😍");
-      setIsAdded(true)
-    }
-    else{
+      setIsAdded(true);
+    } else {
       alert("Already Added your item ☺️");
-
     }
-    
   };
 
   return (
@@ -67,7 +62,7 @@ const Products = ({ item }) => {
         _hover={{}}
         onClick={() => handleAdd(item)}
       >
-        {isAdded ? "ADDED": "ADD TO CART"}
+        {isAdded ? "ADDED" : "ADD TO CART"}
       </Button>
     </Flex>
   );
