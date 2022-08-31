@@ -35,7 +35,7 @@
 ### Tablet View :
 
 <img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(186).png?raw=true" alt="product-image"/>
-<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(187).png?raw=true" alt="product-image"/>
+<img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(185).png?raw=true" alt="product-image"/>
 
 ### Smartphone View :
 <img src="https://github.com/prayaschhetri1/portfolio-pictures/blob/master/repo-screenshorts/Screenshot%20(181).png?raw=true" alt="product-image"/>
