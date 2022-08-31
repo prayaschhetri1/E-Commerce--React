@@ -62,8 +62,9 @@ const Home = () => {
           setLoading(false)
         });
     } else {
-      dispatch(getData());
       setLoading(false)
+      dispatch(getData());
+      
     }
   };
 

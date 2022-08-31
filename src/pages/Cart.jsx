@@ -14,6 +14,7 @@ import { getCartData } from "../redux/action";
 import Products from "../components/Products";
 import CartData from "./../components/CartData";
 import { useNavigate } from "react-router-dom";
+import { Scrollbars } from "react-custom-scrollbars-2";
 
 const Cart = () => {
   const data = useSelector((state) => state.cart);
@@ -31,7 +32,7 @@ const Cart = () => {
 
   useEffect(() => {
     const total = data.reduce((alem, item) => {
-      return alem + (item.price * item.qty);
+      return alem + item.price * item.qty;
     }, 0);
     // console.log(total)
     setTotal(total);
@@ -73,41 +74,53 @@ const Cart = () => {
         <>
           <Flex
             direction={"column"}
-            columns={{ base: 1, md: 2, lg: 4 }}
-            width={{ base: "90%", md: "75%", lg: "50%" }}
             m={"120px auto"}
-            gap="15px"
+            boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
+            p="20px 5px 20px 20px"
+            height={"520px"}
+            overflow="auto"
+            
+            width={{ base: "90%", md: "75%", lg: "50%" }}
           >
-            <Flex justifyContent={"space-between"}>
+            <Scrollbars>
               <Flex
-                border="1px solid grey"
-                width={"300px"}
-                p="10px 20px"
-                align="center"
-                justify={"center"}
-                fontWeight="700"
-                fontSize={"25px"}
-                borderRadius={"5px"}
+                direction={"column"}
+                columns={{ base: 1, md: 2, lg: 4 }}
+                gap="15px"
+                width={"97%"}
               >
-                Total Item : {data.length}
+                <Flex justifyContent={"space-between"}>
+                  <Flex
+                    border="1px solid grey"
+                    width={{sm:"200px",md:"250px",lg:"300px"}}
+                    p={{base:"3px",md:"6px",lg:"10px"}}
+                    align="center"
+                    justify={"center"}
+                    fontWeight="700"
+                    fontSize={{base:"18px",md:"22px",lg:"25"}}
+                    borderRadius={"5px"}
+                  >
+                    Total Item : {data.length}
+                  </Flex>
+                  <Flex
+                    border="1px solid grey"
+                    width={{sm:"200px",md:"250px",lg:"300px"}}
+                    p={{base:"5px 10px",md:"5px 10px",lg:"10px 20px"}}
+                    align="center"
+                    justify={"center"}
+                    fontWeight="700"
+                    fontSize={{base:"18px",md:"22px",lg:"25"}}
+                    borderRadius={"5px"}
+                  >
+                    Total Price : ₹ {total}
+                  </Flex>
+                </Flex>
+                {data.length &&
+                  data.map((item) => {
+                    return <CartData item={item} key={item.id} />;
+                  })}
               </Flex>
-              <Flex
-                border="1px solid grey"
-                width={"300px"}
-                p="10px 20px"
-                align="center"
-                justify={"center"}
-                fontWeight="700"
-                fontSize={"25px"}
-                borderRadius={"5px"}
-              >
-                Total Price : ₹ {total}
-              </Flex>
-            </Flex>
-            {data.length &&
-              data.map((item) => {
-                return <CartData item={item} key={item.id} />;
-              })}
+            </Scrollbars>
           </Flex>
         </>
       )}

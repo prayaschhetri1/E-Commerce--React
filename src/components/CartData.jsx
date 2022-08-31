@@ -78,16 +78,17 @@ const CartData = ({ item }) => {
             width={{ base: "80%", md: "75%", lg: "60%" }}
             direction={"column"}
             gap="5px"
-            align="left"
+            pb="4px"
+            justify={"space-between"}
           >
-            <Text fontSize={"27px"} fontWeight="700">
+            <Text fontSize={{base:"20px",md:"22px",lg:"26"}} fontWeight="700">
               {item.title}
             </Text>
-            <Text fontWeight={"700"} fontSize="21px">
+            <Text fontWeight={"700"} fontSize={{base:"16px",md:"21px",lg:"24"}}>
               {item.category}
             </Text>
-            <Text fontWeight={"700"}>Rating: {item.rating}</Text>
-            <Text fontWeight={"700"}>MRP : ₹ {item.price}</Text>
+            <Text fontWeight={"700"} fontSize={{base:"14px",md:"19px",lg:"22"}}>Rating: {item.rating}</Text>
+            <Text fontWeight={"700"} fontSize={{base:"14px",md:"19px",lg:"22"}}>MRP : ₹ {item.price}</Text>
             <Flex gap="7px" align={"center"}>
               <Button
                 bg="black"
